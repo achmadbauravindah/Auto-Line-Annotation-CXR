@@ -1,6 +1,6 @@
 import streamlit as st
-import keras
-from keras.utils import load_img, img_to_array
+import tensorflow as tf
+from keras_preprocessing.image import load_img, array_to_img, img_to_array
 from skimage import filters
 import matplotlib.pyplot as plt
 from PIL import Image
@@ -16,7 +16,7 @@ def lineSegmentationCXR(image_path):
     image_arr_reshape = image_arr[np.newaxis, ...]  # Reshape menjadi (1, width, height, channel) agar bisa predict
 
     # Prediksi Model UNet
-    UNet_trained_model = keras.models.load_model('UNet_Model_Trained.h5', compile=False)
+    UNet_trained_model = tf.keras.models.load_model('UNet_Model_Trained.h5', compile=False)
     mask_arr = UNet_trained_model.predict(image_arr_reshape)
 
     # Create Line Segmentation
