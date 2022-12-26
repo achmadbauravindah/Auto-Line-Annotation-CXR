@@ -1,6 +1,5 @@
-tensorflow==2.10.0
+keras ==2.11.0
 scikit-image==0.19.3
 matplotlib==3.6.2
 Pillow==9.3.0
 numpy==1.23.4
-requests @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_b15e28ca-768e-4951-b4c6-8a7476e43183hrjpnkg9/croots/recipe/requests_1657734638595/work
